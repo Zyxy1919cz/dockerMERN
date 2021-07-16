@@ -1,0 +1,38 @@
+version: "3.8"
+services: 
+    client:
+        build: 
+           context: ./client
+           dockerfile: Dockerfile.dev
+        container_name: mern-client
+        volumes: 
+            - ./client/src:client/src
+        ports: 
+            - "3000:3000"
+        depends_on: 
+            - server
+        networks: 
+            - mern-network
+    server:
+        build: ./server
+        container_name: mern-server
+# FIXME: Fix volumes for server.
+        volumes: 
+            - ./server:server
+        ports: 
+            - "5000:5000"
+        env_file: ./server/.env
+        depends_on: 
+            - mongoDB
+        networks: 
+            - mern-network
+    mongoDB:
+        image: mongo
+        container_name: mongoDB
+        ports: 
+            - "27017:27017"
+        networks: 
+            - mern-network
+networks: 
+    mern-network:
+        driver: bridge

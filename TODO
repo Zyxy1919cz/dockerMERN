@@ -1,0 +1,16 @@
+TODO:
+    DOCKER:
+        ✔ Create Dockerfiles @high @done(21-07-16 13:14)
+        ✔ Create docker-compose @critical @done(21-07-16 13:14)
+    SERVER:
+        ✔ Add dependencies @started(21-07-16 10:05) @done(21-07-16 13:14) @lasted(3h9m48s)
+        ✔ Create index.js @started(21-07-16 13:22) @done(21-07-16 17:35) @lasted(4h13m24s)
+        ☐ Add models and Controllers
+        ☐ Configurate
+    CLIENT:
+        ✔ Add dependencies @started(21-07-16 10:05) @done(21-07-16 13:14) @lasted(3h9m51s)
+        ☐ Test Webpack
+        ☐ Create React app
+        ☐ SCSS
+FIXME:
+    ☐ Docker-compose

@@ -1,0 +1,16 @@
+# syntax=docker/dockerfile:experimental
+
+# Build stage
+FROM node:lts-slim AS build
+
+WORKDIR /app/client
+
+COPY package.json .
+RUN yarn install
+
+COPY . .
+CMD ["yarn", "build"]
+
+# Production stage
+FROM nginx:latest
+COPY --from=build /app/client/build /usr/share/nginx/html
