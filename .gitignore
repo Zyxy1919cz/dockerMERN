@@ -5,7 +5,6 @@ node_modules
 ./cliend/build
 
 # misc
-.env
 .env.local
 .env.devel
 .env.prod
