@@ -1,5 +1,5 @@
 # Development yaml config
-version: "3.8"
+version: "3"
 services: 
     client:
         build: 
@@ -7,10 +7,11 @@ services:
            dockerfile: Dockerfile.dev
         container_name: mern-client
         volumes: 
-            - ./client/src:/app/src
-            - ./client/public:/app/public
+            - ./client/src:/app/client/src
+            - ./client/public:/app/client/public
         ports: 
             - "3000:3000"
+        env_file: ./client/.env
         depends_on: 
             - server
         networks: 
@@ -19,17 +20,17 @@ services:
         build: ./server
         container_name: mern-server
         volumes: 
-            - /server:/app
+            - ./server:/app/server
         ports: 
             - "5000:5000"
-        env_file: ./server/.env.devel
-        depends_on: 
-            - mongoDB
+        env_file: ./server/.env
         networks: 
             - mern-network
-    mongoDB:
-        image: mongo
-        container_name: mongoDB
+    mongodb:
+        image: mongo:latest
+        container_name: mongodb
+        volumes: 
+            - data-node:/data/db
         ports: 
             - "27017:27017"
         networks: 
@@ -37,3 +38,6 @@ services:
 networks: 
     mern-network:
         driver: bridge
+volumes: 
+    data-node:
+        

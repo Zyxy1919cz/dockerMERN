@@ -2,7 +2,7 @@
 
 FROM node:lts-slim
 
-WORKDIR /app
+WORKDIR /app/client
 
 COPY package.json .
 RUN yarn install
