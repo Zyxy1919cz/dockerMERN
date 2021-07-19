@@ -1,16 +1,31 @@
-TODO:
+TODOS:
     DOCKER:
         ✔ Create Dockerfiles @high @done(21-07-16 13:14)
         ✔ Create docker-compose @critical @done(21-07-16 13:14)
     SERVER:
         ✔ Add dependencies @started(21-07-16 10:05) @done(21-07-16 13:14) @lasted(3h9m48s)
         ✔ Create index.js @started(21-07-16 13:22) @done(21-07-16 17:35) @lasted(4h13m24s)
-        ☐ Add models and Controllers
-        ☐ Configurate
+        ✔ Run server with nodemon @done(21-07-19 09:05)
+        ☐ Add models and Controllers @started(21-07-19 10:16)
+        ☐ Add login using Json Web Token or Google OAuth
+        ☐ Configurate security and Nginx server
     CLIENT:
         ✔ Add dependencies @started(21-07-16 10:05) @done(21-07-16 13:14) @lasted(3h9m51s)
-        ☐ Test Webpack
+        ✔ Test live development with react scripts @started(21-07-19 08:36) @done(21-07-19 09:04) @lasted(28m7s)
+        ✔ Test Webpack @done(21-07-19 09:59)
         ☐ Create React app
-        ☐ SCSS
+        PAGES:
+            ☐ Set up SCSS formating
+            MAIN:
+                ☐ Add Main page
+                ☐ About Page
+                ☐ Write manifest.json
+                ☐ Create projects page with database
+                ☐ Create LANG local
+            FORUM:
+                ☐ Add frontend page
+                ☐ Set up login
+                ☐ 
 FIXME:
-    ☐ Docker-compose
+    ✔ Docker-compose @started(21-07-19 08:15) @done(21-07-19 08:24) @lasted(9m6s)
+    ✔ Add volumes to server and client for live monitoring @started(21-07-19 08:37) @done(21-07-19 09:04) @lasted(27m10s)

@@ -1,3 +1,4 @@
+# Development yaml config
 version: "3.8"
 services: 
     client:
@@ -6,7 +7,8 @@ services:
            dockerfile: Dockerfile.dev
         container_name: mern-client
         volumes: 
-            - ./client/src:client/src
+            - ./client/src:/app/src
+            - ./client/public:/app/public
         ports: 
             - "3000:3000"
         depends_on: 
@@ -16,12 +18,11 @@ services:
     server:
         build: ./server
         container_name: mern-server
-# FIXME: Fix volumes for server.
         volumes: 
-            - ./server:server
+            - /server:/app
         ports: 
             - "5000:5000"
-        env_file: ./server/.env
+        env_file: ./server/.env.devel
         depends_on: 
             - mongoDB
         networks: 

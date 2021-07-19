@@ -1,2 +1,14 @@
+# dependencies
 node_modules
+
+# production
+./cliend/build
+
+# misc
 .env
+.env.local
+.env.devel
+.env.prod
+
+# IDEs
+.theia

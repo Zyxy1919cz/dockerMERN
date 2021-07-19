@@ -3,7 +3,7 @@
 # Build stage
 FROM node:lts-slim AS build
 
-WORKDIR /app/client
+WORKDIR /app
 
 COPY package.json .
 RUN yarn install

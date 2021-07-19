@@ -2,10 +2,11 @@
 
 FROM node:lts-slim 
 
-WORKDIR /app/server
+WORKDIR /app
 
 COPY package.json .
 RUN yarn install
 
 COPY . .
-CMD ["yarn", "start"]
+EXPOSE 5000
+CMD ["yarn", "dev"]

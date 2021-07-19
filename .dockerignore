@@ -1,1 +1,11 @@
+# dependencies
 node_modules
+
+# misc
+.env
+.env.local
+.env.devel
+.env.prod
+
+# IDEs
+.theia
