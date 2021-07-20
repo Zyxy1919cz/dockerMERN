@@ -4,9 +4,19 @@ import React from 'react';
 const Header = () => {
     return (
         <container className="header">
-            <div>
-                <p>Some text</p>
-            </div>
+            <nav>
+                <p>Welcome</p>
+                <ul>
+                    <li>Home</li>
+                    <li>Projects</li>
+                    <li>Some more</li>
+                    <li>About</li>
+                </ul>
+                <div className="search-box">
+                    <input type="text" placeholder="Search..."/>
+                    <i class="fa fa-search"/>
+                </div>
+            </nav>
         </container>
     )
 };
