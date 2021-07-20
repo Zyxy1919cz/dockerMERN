@@ -1,0 +1,11 @@
+@use 'vars/fonts';
+@use 'vars/colors';
+
+* {
+  background-color: rgba(160, 17, 17, 0.822);
+  font-size: 14;
+}
+container.header {
+    background-color: #000;
+    font-size: 4;
+}

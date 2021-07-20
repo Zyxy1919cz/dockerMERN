@@ -14,3 +14,4 @@ CMD ["yarn", "build"]
 # Production stage
 FROM nginx:latest
 COPY --from=build /app/client/build /usr/share/nginx/html
+EXPOSE 80
