@@ -1,0 +1,100 @@
+@import 'vars/fonts';
+@import 'vars/colors';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $overlay;
+  font-family: $roboto-main;
+  color: rgb(243, 237, 237);
+
+}
+
+container.header {
+
+  nav {
+    background-color: $primary-color;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+
+    ul {
+    list-style-type: none;
+    display: flex;
+    }
+
+    li {
+      padding: 10px;
+    }
+
+    li:hover {
+     color: rgb(126, 4, 4);
+     border-bottom: 2px, solid, rgb(105, 0, 0);
+     cursor: pointer;
+    }
+  }
+
+  .search-box {
+    position: relative;
+    padding: 0;
+    margin: 5px;
+    display: block;
+    width: 100%;
+    max-width: 32px;
+    transition: 0.4s linear;
+    overflow: hidden;
+
+    input {
+      display: block;
+      appearance: none;
+      width: 100%;
+
+      border: none;
+      outline: none;
+      border-radius: 100vh;
+
+      background-color: rgb(124, 3, 3);
+
+      padding: 8px;
+      color: rgb(255, 255, 255);
+      font-size: 14;
+      cursor: pointer;
+      transition: 0.4s linear;
+
+      &::placeholder {
+        color: rgb(82, 1, 1);
+      }
+
+      // FIXME: Line up search simbol with <input> 
+      // probably due to <i> being in second box display within <div search-box>
+      i {
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translate(50%, -50%);
+
+        width: 14px;
+        height: 14px;
+
+        pointer-events: none;
+        color: black;
+      }
+    }
+
+    &:focus-within {
+      max-width: 200px;
+
+      input {
+        background-color: blue;
+        padding-right: 50px;
+
+      }
+    }
+  }
+}

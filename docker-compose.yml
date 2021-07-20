@@ -6,12 +6,12 @@ services:
            context: ./client
            dockerfile: Dockerfile.dev
         container_name: mern-client
-        volumes: 
-            - ./client/src:/app/client/src
-            - ./client/public:/app/client/public
+        volumes:
+            - "./client/src:/app/src"
+            - "./client/public:/app/public"
         ports: 
             - "3000:3000"
-        env_file: ./client/.env
+        env_file: .env.client
         depends_on: 
             - server
         networks: 
@@ -20,10 +20,12 @@ services:
         build: ./server
         container_name: mern-server
         volumes: 
-            - ./server:/app/server
+            - "./server/:/app/server/"
         ports: 
             - "5000:5000"
-        env_file: ./server/.env
+        env_file: .env.server
+        depends_on: 
+            - mongodb
         networks: 
             - mern-network
     mongodb:

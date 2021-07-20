@@ -31,3 +31,4 @@ FIXME:
     ✔ Docker-compose @started(21-07-19 08:15) @done(21-07-19 08:24) @lasted(9m6s)
     ✔ Add volumes to server and client for live monitoring @started(21-07-19 08:37) @done(21-07-19 09:04) @lasted(27m10s)
     ✔ Docker mern-server nodemon not found @started(21-07-19 13:27) @done(21-07-19 15:08) @lasted(1h41m49s)
+    ✔ Docker watch live sass file @started(21-07-20 11:30) @done(21-07-20 12:08) @lasted(38m2s)
