@@ -12,6 +12,9 @@ services:
         ports: 
             - "3000:3000"
         env_file: .env.client
+        environmnet:
+            - NODE_ENV=development
+            - CHOKIDAR_USEPOLLING=true
         depends_on: 
             - server
         networks: 
