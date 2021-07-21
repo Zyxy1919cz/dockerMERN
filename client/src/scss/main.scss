@@ -1,6 +1,7 @@
 @import 'vars/fonts';
 @import 'vars/colors';
 
+// Page styling
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,7 +15,8 @@ body {
 
 }
 
-container.header {
+// Header styling
+header {
 
   nav {
     background-color: $primary-color;

@@ -6,6 +6,6 @@ const postShema = mongoose.Schema({
     number: Number
 });
 
-const PostMessage = mongoose.model('')
+const PostMessage = mongoose.model('PostMessage', postShema);
 
 export default PostMessage;

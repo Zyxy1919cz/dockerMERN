@@ -3,7 +3,7 @@ import React from 'react';
 // Main header
 const Header = () => {
     return (
-        <container className="header">
+        <header>
             <nav>
                 <p>Welcome</p>
                 <ul>
@@ -17,7 +17,7 @@ const Header = () => {
                     <i class="fa fa-search"/>
                 </div>
             </nav>
-        </container>
+        </header>
     )
 };
 
