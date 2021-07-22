@@ -3,20 +3,21 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
 
-import postRoutes from './routes/posts.js';
+import projectRoutes from './routes/projects.js';
 
 const app = express();
 dotenv.config();
 
 const PORT = process.env.PORT;
-const CONNECTION_URL = "mongodb://mongodb:27017/posts";
+const CONNECTION_URL = "mongodb://mongodb:27017/project";
 
-app.use('/posts', postRoutes);
 
 // TODO: Later rise limit for images uploaded to forum
 app.use(express.json({limit: "3mb", extended: true}));
 app.use(express.urlencoded({limit: "3mb", extended: true}));
 app.use(cors());
+
+app.use('/project', projectRoutes);
 
 console.log(`${PORT}  ${CONNECTION_URL}`)
 
